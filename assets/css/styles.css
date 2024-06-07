@@ -14,7 +14,7 @@
     transition: all 0.2s ease-in-out;
 }
 
-.menu-label svg:hover {
+.menu-label svg:active {
     fill: #c5c5c5;
 }
 
@@ -37,8 +37,14 @@ nav a:hover {
     color: #c5c5c5;
 }
 
-.container {
-    height: 250vh;
+.who-are-us {
+    min-height: 100vh;
+    background-color: #292929;
+    color: #c5c5c5;
+    display: flex;
+}
+
+.who-are-us div {
 }
 
 @media screen and (max-width: 768px) {
@@ -65,5 +71,9 @@ nav a:hover {
 
     .menu-input:checked~nav {
         display: flex;
+    }
+
+    .menu-input:checked~.menu-label svg {
+        fill: #c5c5c5;
     }
 }
