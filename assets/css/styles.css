@@ -88,8 +88,7 @@ nav a:hover {
 
     .menu-input:checked~nav {
         display: flex;
-        animation-name: slidein;
-        animation-duration: 0.2s;
+        animation: slidein 0.4s;
     }
 
     .menu-input:checked~.menu-label svg {
@@ -99,20 +98,14 @@ nav a:hover {
 
 @keyframes slidein {
     from {
-    margin-top: -200px;
-    z-index: -2;
+        opacity: 0%;
+        margin: -200px 0 0 -200px;
+        z-index: 2;
     }
 
     to {
-    }
-}
-
-@keyframes slideout {
-    from {
-    }
-
-    to {
-        margin-top: -200px;
-    z-index: -2;
+        opacity: 100%;
+        margin: 0;
+        z-index: 2;
     }
 }
