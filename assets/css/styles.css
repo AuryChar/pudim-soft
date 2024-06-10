@@ -5,7 +5,7 @@
     font-family: "Josefin Sans", sans-serif;
 }
 
-.menu-input, .menu-label {
+.menu-input, .menu-label, aside h1 {
     display: none;
 }
 
@@ -54,6 +54,8 @@ nav a:hover {
 
 @media screen and (max-width: 768px) {
     nav {
+        top: 80px;
+        left: 0px;
         position: fixed;
         flex-direction: column;
         position: fixed;
@@ -62,6 +64,8 @@ nav a:hover {
         transition: all 0.2s ease-in-out;
         display: none;
         box-shadow: #161616 0 0 45px;
+        animation-name: slidein;
+        animation-duration: 0.2s;
     }
 
     .menu-label {
@@ -69,7 +73,16 @@ nav a:hover {
         padding: 10px;
     }
 
+    aside h1 {
+        display: flex;
+        color: #929292;
+    }
+
     aside {
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
         position: fixed;
         width: 100%;
         background-color: #161616;
@@ -81,5 +94,15 @@ nav a:hover {
 
     .menu-input:checked~.menu-label svg {
         fill: #c5c5c5;
+    }
+}
+
+@keyframes slidein {
+    from {
+    margin-top: -200px;
+    z-index: -2;
+    }
+
+    to {
     }
 }
