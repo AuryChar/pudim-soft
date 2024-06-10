@@ -64,8 +64,6 @@ nav a:hover {
         transition: all 0.2s ease-in-out;
         display: none;
         box-shadow: #161616 0 0 45px;
-        animation-name: slideout;
-        animation-duration: 0.2s;
     }
 
     .menu-label {
@@ -91,10 +89,6 @@ nav a:hover {
     .menu-input:checked~nav {
         display: flex;
         animation-name: slidein;
-        animation-duration: 0.2s;
-    }
-    .menu-input:active~nav {
-        animation-name: slideout;
         animation-duration: 0.2s;
     }
 
