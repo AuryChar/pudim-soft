@@ -5,7 +5,7 @@
     font-family: "Josefin Sans", sans-serif;
 }
 
-.menu-input, .menu-label {
+.menu-input, .menu-label, aside h1 {
     display: none;
 }
 
@@ -14,7 +14,7 @@
     transition: all 0.2s ease-in-out;
 }
 
-.menu-label svg:hover {
+.menu-label svg:active {
     fill: #c5c5c5;
 }
 
@@ -37,12 +37,25 @@ nav a:hover {
     color: #c5c5c5;
 }
 
-.container {
-    height: 250vh;
+.who-are-us {
+    min-height: 100vh;
+    background-color: #292929;
+    color: #c5c5c5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.who-are-us div {
+    margin: 20px;
+    width: 100%;
+    max-width: 1000px;
 }
 
 @media screen and (max-width: 768px) {
     nav {
+        top: 80px;
+        left: 0px;
         position: fixed;
         flex-direction: column;
         position: fixed;
@@ -50,6 +63,7 @@ nav a:hover {
         align-items: start;
         transition: all 0.2s ease-in-out;
         display: none;
+        box-shadow: #161616 0 0 45px;
     }
 
     .menu-label {
@@ -57,7 +71,16 @@ nav a:hover {
         padding: 10px;
     }
 
+    aside h1 {
+        display: flex;
+        color: #929292;
+    }
+
     aside {
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
         position: fixed;
         width: 100%;
         background-color: #161616;
@@ -65,5 +88,24 @@ nav a:hover {
 
     .menu-input:checked~nav {
         display: flex;
+        animation: slidein 0.4s;
+    }
+
+    .menu-input:checked~.menu-label svg {
+        fill: #c5c5c5;
+    }
+}
+
+@keyframes slidein {
+    from {
+        opacity: 0%;
+        margin: -200px 0 0 -200px;
+        z-index: 2;
+    }
+
+    to {
+        opacity: 100%;
+        margin: 0;
+        z-index: 2;
     }
 }
